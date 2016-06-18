@@ -1,0 +1,10 @@
+﻿Elaboração do projeto, possiveis classes
+classes:
+		casa
+		alimentação
+		lazer
+		transporte
+		educação
+		autenticação
+		usuário
+		data
