@@ -1,9 +1,11 @@
 package orcamentoDomestico;
 
+import javax.swing.JOptionPane;
+
 public class Usuario {
-	private String nome;
-	private String cpf;
-	private int matricula;
+	private String nome = JOptionPane.showInputDialog("Digite o nome do usuario");
+	private String cpf = JOptionPane.showInputDialog("Digite o cpf");
+	private int matricula = Integer.parseInt(JOptionPane.showInputDialog("Digite a matricula"));
 	
 	public String getNome() {
 		return nome;
