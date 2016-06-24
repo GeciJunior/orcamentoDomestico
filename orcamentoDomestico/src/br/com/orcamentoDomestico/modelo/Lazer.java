@@ -1,4 +1,4 @@
-package orcamentoDomestico;
+package br.com.orcamentoDomestico.modelo;
 
 import javax.swing.JOptionPane;
 

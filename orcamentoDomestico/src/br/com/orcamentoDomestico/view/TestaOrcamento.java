@@ -1,6 +1,9 @@
-package orcamentoDomestico;
+package br.com.orcamentoDomestico.view;
 
 import javax.swing.JOptionPane;
+
+import br.com.orcamentoDomestico.modelo.Casa;
+import br.com.orcamentoDomestico.modelo.Usuario;
 
 public class TestaOrcamento {
 

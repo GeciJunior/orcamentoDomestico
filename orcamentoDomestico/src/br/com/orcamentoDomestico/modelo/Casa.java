@@ -1,4 +1,4 @@
-package orcamentoDomestico;
+package br.com.orcamentoDomestico.modelo;
 
 import javax.swing.JOptionPane;
 
@@ -6,7 +6,7 @@ public class Casa extends Gastos{
 	private double aluguel = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do aluguel"));
 	private double agua = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da agua"));
 	private double luz = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da luz"));
-	double totalCasa;
+	public double totalCasa;
 	
 	public double getAluguel() {
 		return aluguel;
@@ -35,5 +35,6 @@ public class Casa extends Gastos{
 	@Override
 	public void valorTotal(){
 		totalCasa = (this.aluguel + this.agua + this.luz);
+		valorTotal();
 	}
 }
