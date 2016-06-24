@@ -1,5 +1,7 @@
 package orcamentoDomestico;
 
 public class Gastos {
-	double valor;
+	public void valorTotal(){
+		
+	}
 }

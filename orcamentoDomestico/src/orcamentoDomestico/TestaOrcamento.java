@@ -8,7 +8,14 @@ public class TestaOrcamento {
 		Usuario us = new Usuario();
 		us.getNome();
 
-		JOptionPane.showMessageDialog(null,"Nome: " +us.getNome());
+		Casa cs = new Casa();
+		cs.valorTotal();
+				
+		JOptionPane.showMessageDialog(null, "Nome: " +us.getNome()+
+											"\nAluguel: " + cs.getAluguel()+
+											"\n¡gua: " + cs.getAgua()+
+											"\nLuz: " + cs.getLuz()+
+										    "\nTotal: " + cs.totalCasa);
+		
 	}
-
 }
