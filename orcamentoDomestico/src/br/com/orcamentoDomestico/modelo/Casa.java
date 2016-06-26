@@ -35,6 +35,5 @@ public class Casa extends Gastos{
 	@Override
 	public void valorTotal(){
 		totalCasa = (this.aluguel + this.agua + this.luz);
-		valorTotal();
 	}
 }

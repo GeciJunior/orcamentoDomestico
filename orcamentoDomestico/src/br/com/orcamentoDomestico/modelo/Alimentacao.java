@@ -7,7 +7,7 @@ public class Alimentacao extends Gastos{
 	private double almoco = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do almoço"));
 	private double jantar = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da janta"));
 	private double lanche = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do lanche"));
-	double totalAlimentacao;
+	public double totalAlimentacao;
 	
 	public double getCafeDaManha() {
 		return cafeDaManha;
@@ -38,5 +38,4 @@ public class Alimentacao extends Gastos{
 	public void valorTotal(){
 		totalAlimentacao = (this.cafeDaManha + this.almoco + this.jantar + this.lanche);
 	}
-	
 }

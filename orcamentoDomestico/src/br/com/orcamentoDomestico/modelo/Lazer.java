@@ -6,7 +6,7 @@ public class Lazer extends Gastos{
 	private double festas = Double.parseDouble(JOptionPane.showInputDialog("Digite os gastos com a festa"));
 	private double cinema = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do cinema"));
 	private double jogos = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor dos jogos"));
-	double totalLazer;
+	public double totalLazer;
 	
 	public double getFestas() {
 		return festas;

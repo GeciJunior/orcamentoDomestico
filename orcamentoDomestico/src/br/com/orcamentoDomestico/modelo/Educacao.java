@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Educacao extends Gastos{
 	private double escola = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da escola"));
 	private double curso = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do curso"));
-	double totalEducacao;
+	public double totalEducacao;
 	
 	public double getEscola() {
 		return escola;
@@ -23,6 +23,5 @@ public class Educacao extends Gastos{
 	@Override
 	public void valorTotal(){
 		totalEducacao = (this.escola + this.curso);
-		//super.valorTotal();
 	}
 }
