@@ -4,9 +4,11 @@ import javax.swing.JOptionPane;
 import br.com.orcamentoDomestico.modelo.*;
 
 public class TestaOrcamento{
+	double totalGeral = 0;
 
 	public void opcaoGastos(){
 		int opcao;
+		
 		do {
 		
 		JOptionPane.showMessageDialog(null, "Digite a opção do gasto: \n1 Casa"
@@ -27,6 +29,7 @@ public class TestaOrcamento{
 												"\nÁgua: " + cs.getAgua()+
 												"\nLuz: " + cs.getLuz()+
 											    "\nTotal: " + cs.totalCasa);
+			totalGeral += cs.totalCasa;
 			break;
 		case 2:
 			Alimentacao al = new Alimentacao();
@@ -37,6 +40,7 @@ public class TestaOrcamento{
 												"\nJantar: " + al.getJantar()+
 												"\nLanche: " + al.getLanche()+
 												"\nTotal: " + al.totalAlimentacao);
+			totalGeral += al.totalAlimentacao; 
 			break;
 		case 3:
 			Educacao edu = new Educacao();
@@ -45,6 +49,7 @@ public class TestaOrcamento{
 			JOptionPane.showMessageDialog(null, "\nEscola: " + edu.getEscola()+
 												"\nCurso: " + edu.getCurso()+
 												"\nTotal" + edu.totalEducacao);
+			totalGeral += edu.totalEducacao;
 			break;
 		case 4:
 			Lazer lz = new Lazer();
@@ -54,6 +59,7 @@ public class TestaOrcamento{
 												"\nCinema: " + lz.getCinema()+
 												"\nJogos: " + lz.getJogos()+
 												"\nTotal: " + lz.totalLazer);
+			totalGeral += lz.totalLazer;
 			break;
 		case 5:
 			Transporte trans = new Transporte();
@@ -62,6 +68,7 @@ public class TestaOrcamento{
 			JOptionPane.showMessageDialog(null, "\nCarro: " + trans.getCarro()+
 												"\nOnibus: " + trans.getOnibus()+
 												"\nTotal: " + trans.totalTransporte);
+			totalGeral += trans.totalTransporte;
 			break;
 		case 6:
 			DespesasExtras despesas = new DespesasExtras();
@@ -69,6 +76,7 @@ public class TestaOrcamento{
 			
 			JOptionPane.showMessageDialog(null, "\nDespesa: " + despesas.getTipo()+
 												"\nValor: " + despesas.getValor());
+			totalGeral += despesas.getValor();
 			break;
 		case 7:
 			JOptionPane.showMessageDialog(null, "Sem mais gastos a informar");
@@ -76,15 +84,17 @@ public class TestaOrcamento{
 			
 			default:
 				JOptionPane.showMessageDialog(null, "Opção inválida");
-				break;			
-		}
+				break;
+		}	
 	}while (opcao != 7);
+		JOptionPane.showMessageDialog(null, "\nUsuário: " + new Usuario().getNome()+
+											"\nGasto Geral: " + totalGeral);
 }	
 	
 	
 	public static void main(String[] args) {
-		Usuario us = new Usuario();
-		us.getNome();
+		//Usuario us = new Usuario();
+		//us.getNome();
 		TestaOrcamento teste = new TestaOrcamento();
 		teste.opcaoGastos();
 	}
